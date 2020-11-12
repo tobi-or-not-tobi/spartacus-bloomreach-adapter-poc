@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@spartacus/styles";
+
+cx-banner p {
+  // let's drop the crazy standard styles for banner content
+  all: unset;
+  color: black;
+}

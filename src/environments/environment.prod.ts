@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  bloomreachEndpoint: 'https://poc.brdemo.net/site/resourceapi/',
 };
