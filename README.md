@@ -10,12 +10,8 @@ Run `npm install` to install the dependencies.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-We leverage a public backend for SAP commerce cloud and Bloomreach without any support. There are a few things of importance:
-
-- Bloomreach isn't (yet) setup with CORS, so need to workaround that locally (proxy or browser settings).
-- The Commerce API doesn't have a ssl certificate, so you need to accept the website to not being secure.
-
 ## Known issues
 
 - The Bloomreach spa-sdk throws an error at startup which prevents the first run. You need to make a change in the code base to successfully open the page
 - A warning is thrown regarding the Bloomreach spa-sdk lib is shipped with depenendencies that cannot be fully optimized.
+- The Commerce API doesn't have a ssl certificate, so you need to accept the website to not being secure.
