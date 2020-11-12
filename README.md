@@ -1,27 +1,21 @@
-# Spa6
+# Spartacus Bloomreach adapter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+POC codebase to evaluate / demonstrate Spartacus adapter patters in the context of Bloomreach CMS.
+
+## Setup
+
+Run `npm install` to install the dependencies.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+We leverage a public backend for SAP commerce cloud and Bloomreach without any support. There are a few things of importance:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Bloomreach isn't (yet) setup with CORS, so need to workaround that locally (proxy or browser settings).
+- The Commerce API doesn't have a ssl certificate, so you need to accept the website to not being secure.
 
-## Build
+## Known issues
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- The Bloomreach spa-sdk throws an error at startup which prevents the first run. You need to make a change in the code base to successfully open the page
+- A warning is thrown regarding the Bloomreach spa-sdk lib is shipped with depenendencies that cannot be fully optimized.
